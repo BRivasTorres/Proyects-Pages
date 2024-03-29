@@ -3,9 +3,17 @@ import ProjectCard from "./ProjectCard"
 
 const PrintProjects = () => {
   return (
-    <div>
+    <div className="">
       {projectsData.map(project => {
-        <ProjectCard key={project.id} />
+        return (
+          <ProjectCard 
+            key={project.id} 
+            name={project.nameProject} 
+            img={project.urlImg} 
+            url={project.urlProject} 
+            repo={project.repoProject}
+          />
+        )
       })}
     </div>
   )
