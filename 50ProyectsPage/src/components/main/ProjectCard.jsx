@@ -5,7 +5,7 @@ const ProjectCard = ({id, name, img, url, repo}) => {
   return (
 		<div
 			id={id}
-			className="bg-secondary-color text-primary-color font-bold text-[1.5rem] p-[1rem] rounded-[5px] flex flex-col items-center gap-y-[1rem] "
+			className="bg-secondary-color text-primary-color font-bold text-[1.5rem] p-[1rem] rounded-[5px] flex flex-col items-center justify-between gap-y-[1rem] "
 		>
 			<section>
 				<img
