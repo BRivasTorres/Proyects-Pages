@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard"
 
 const PrintProjects = () => {
   return (
-    <div className="">
+    <div className="projects-wrapper">
       {projectsData.map(project => {
         return (
           <ProjectCard 
