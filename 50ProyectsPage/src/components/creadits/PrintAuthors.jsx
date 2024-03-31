@@ -28,7 +28,7 @@ const PrintAuthors = () => {
   
     
   return (
-    <div className="flex flex-col gap-[1rem] mt-[2rem]">
+    <div className="flex flex-col gap-[1rem] mt-[1rem] ">
         {authorsData.map((item) => {
             const {avatar_url, name, bio, html_url, node_id} = item
             return(

@@ -3,7 +3,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const AuthorsCard = ({ img, name, bio, gitUrl }) => {
 	return (
-		<div className="authors-card gap-[1rem] p-[2rem] w-[55%] mx-auto max-x-[1200px] bg-secondary-color text-primary-color rounded-[10px] font-semibold">
+		<div className="authors-card gap-[1rem] p-[1.5rem] bg-secondary-color text-primary-color rounded-[10px] font-semibold ">
 			<img
 				src={img}
 				alt="avatar"
