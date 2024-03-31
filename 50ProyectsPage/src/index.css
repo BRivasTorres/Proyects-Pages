@@ -14,3 +14,11 @@
     transition: all 300ms linear;
     opacity: .6;
 }
+
+.authors-card {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}

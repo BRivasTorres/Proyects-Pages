@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
   return (
-		<div className="text-secondary-color font-semibold font-secondary-font text-[3rem]">
-			<ul className=" flex  justify-center items-center gap-[2rem] bg-tertiary-color text-primary-color">
+		<div className="text-secondary-color font-semibold font-secondary-font text-[2.5rem]">
+			<ul className=" flex  justify-center items-center gap-[2rem] bg-tertiary-color text-primary-color p-[.8rem] ">
 				<li>
 					<NavLink to={"/"} className="link-styles">
 						Projects
