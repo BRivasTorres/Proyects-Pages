@@ -6,11 +6,11 @@ const PrintProjects = () => {
     <div className="projects-wrapper">
       {projectsData.map(project => {
         return (
-          <ProjectCard 
-            key={project.id} 
-            name={project.nameProject} 
-            img={project.urlImg} 
-            url={project.urlProject} 
+          <ProjectCard
+            key={project.id}
+            name={project.nameProject}
+            img={project.urlImg}
+            url={project.urlProject}
             repo={project.repoProject}
           />
         )
