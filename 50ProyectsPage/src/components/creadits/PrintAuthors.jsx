@@ -23,7 +23,11 @@ const PrintAuthors = () => {
     }, [])
     
   if(isLoading) {
-    return <h3 className="text-center font-semibold text-[3rem] text-quinary-color mt-[3rem] ">Data is loading...</h3>
+    return (
+		<h3 className="text-center font-semibold text-[3rem] text-tertiary-color mt-[3rem] ">
+			Data is loading...
+		</h3>
+	);
   }  
   
     

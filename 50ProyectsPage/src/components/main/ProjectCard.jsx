@@ -5,7 +5,7 @@ const ProjectCard = ({id, name, img, url, repo}) => {
   return (
 		<div
 			id={id}
-			className="bg-secondary-color text-primary-color font-bold text-[1.5rem] p-[1rem] rounded-[5px] flex flex-col items-center justify-between gap-y-[1rem] "
+			className="bg-[#00124B] text-light font-bold text-[1.5rem] p-[1rem] rounded-[5px] flex flex-col items-center justify-between gap-y-[1rem] "
 		>
 			<section>
 				<img
@@ -16,7 +16,7 @@ const ProjectCard = ({id, name, img, url, repo}) => {
 			</section>
 
 			<section>
-				<h3>{name}</h3>
+				<h3 className="leading-snug mb-6">{name}</h3>
 				<div className="text-center">
 					<a href={url} target="blank">
 						<FontAwesomeIcon
