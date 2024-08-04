@@ -10,6 +10,24 @@
     gap: 5px;
 }
 
+.project-cart {
+    @apply font-bold text-[1.5rem] p-[1rem] transition-all duration-500 ease-in-out;
+}
+
+.project-cart:hover * {
+    opacity: 1;
+    transition: all 600 ease-in;
+    cursor: pointer;
+}
+
+.project-cart--placeholder {
+    @apply w-[100%] h-[100%] flex items-center justify-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0 transition-all duration-500 ease-in-out ;
+    background: rgba(0, 0, 0, 0.26);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+}
+
 .link-styles {
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
     animation: animate 5s linear infinite;
@@ -52,7 +70,6 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
 }
-
 
 @keyframes animate {
     0%,

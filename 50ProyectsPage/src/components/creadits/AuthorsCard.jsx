@@ -13,7 +13,7 @@ const AuthorsCard = ({ img, name, bio, gitUrl }) => {
 				<h2>{name}</h2>
 				<p>{bio}</p>
 				<a href={gitUrl} target="blank">
-					<FontAwesomeIcon icon={faGithub} className="text-light text-[2rem] hover:opacity-50 transition-all duration-300 " />
+					<FontAwesomeIcon icon={faGithub} className="text-light text-[2rem] w-fit hover:opacity-50 transition-all duration-300 " />
 				</a>
 			</section>
 		</div>

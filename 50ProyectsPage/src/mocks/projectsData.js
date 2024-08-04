@@ -174,6 +174,7 @@ const projectsData = [
 		urlImg: "/imgs/day22.png",
 		repoProject:
 			"https://github.com/BRivasTorres/50ProjectsIn50Days/tree/main/Day22",
+		featured: true
 	},
 	{
 		id: 23,
@@ -222,6 +223,7 @@ const projectsData = [
 		urlImg: "/imgs/day28.png",
 		repoProject:
 			"https://github.com/BRivasTorres/50ProjectsIn50Days/tree/main/Day28",
+		featured:true,
 	},
 	{
 		id: 29,
@@ -262,6 +264,7 @@ const projectsData = [
 		urlImg: "/imgs/day33.png",
 		repoProject:
 			"https://github.com/BRivasTorres/50ProjectsIn50Days/tree/main/Day33",
+		featured:true
 	},
 	{
 		id: 34,
@@ -390,6 +393,7 @@ const projectsData = [
 		urlImg: "/imgs/day49.png",
 		repoProject:
 			"https://github.com/BRivasTorres/50ProjectsIn50Days/tree/main/Day49",
+		featured:true
 	},
 	{
 		id: 50,

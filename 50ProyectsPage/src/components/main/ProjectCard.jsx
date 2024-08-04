@@ -5,19 +5,15 @@ const ProjectCard = ({id, name, img, url, repo}) => {
   return (
 		<div
 			id={id}
-			className="bg-[#00124B] text-light font-bold text-[1.5rem] p-[1rem] rounded-[5px] flex flex-col items-center justify-between gap-y-[1rem] "
+			className="bg-[#00124B] text-light  project-cart"
 		>
-			<section>
+			<section className="relative ">
 				<img
 					src={img}
 					alt={name}
-					className="min-h-[200px] rounded-[5px]"
+					className="min-h-[200px] rounded-[5px] w-[100%]"
 				/>
-			</section>
-
-			<section>
-				<h3 className="leading-snug mb-6">{name}</h3>
-				<div className="text-center">
+				<div className="project-cart--placeholder">
 					<a href={url} target="blank">
 						<FontAwesomeIcon
 							icon={faInternetExplorer}
@@ -31,6 +27,10 @@ const ProjectCard = ({id, name, img, url, repo}) => {
 						/>
 					</a>
 				</div>
+			</section>
+
+			<section>
+				<h3 className="leading-snug my-6 text-center">{name}</h3>
 			</section>
 		</div>
   );

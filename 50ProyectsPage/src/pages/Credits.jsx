@@ -6,7 +6,7 @@ const Credits = () => {
   return (
 		<div className="flex flex-col-reverse items-center gap-x-[3rem] min-h-[100vh] w-[70%] mx-auto max-w-[1600px] sm:grid sm:grid-cols-[_65%_35%] ">
 			<PrintAuthors />
-			<section className="text-[2rem] font-semibold flex flex-col mt-[1rem] gap-y-[3rem] pause-animation">
+			<section className="text-[2rem] font-semibold flex flex-col my-[4rem] sm:mb-0 gap-y-[3rem] pause-animation">
 				<a
 					href="https://50projects50days.com/index.html"
 					target="blank"
