@@ -3,19 +3,31 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const AuthorsCard = ({ img, name, bio, gitUrl }) => {
 	return (
-		<div className="authors-card gap-[1rem] p-[1.5rem] bg-secondary-color text-tertiary-color rounded-[10px] font-semibold ">
-			<img
-				src={img}
-				alt="avatar"
-				className="w-[150px] rounded-[100%]"
-			/>
-			<section className="flex flex-col gap-[1rem]">
-				<h2>{name}</h2>
-				<p>{bio}</p>
-				<a href={gitUrl} target="blank">
-					<FontAwesomeIcon icon={faGithub} className="text-light text-[2rem] w-fit hover:opacity-50 transition-all duration-300 " />
-				</a>
-			</section>
+		<div className="authors-card text-tertiary-color max-w-[500px]">
+			<div className="box">
+				<div className="front card">
+					<img
+						src={img}
+						alt="avatar"
+						className="w-[150px] rounded-[100%]"
+					/>
+				</div>
+				<div className="left card">
+					<h2>{name}</h2>
+				</div>
+				<div className="rigth card">
+					<p>{bio}</p>
+				</div>
+				<div className="back card">
+					<a href={gitUrl} target="blank">
+						<FontAwesomeIcon
+							icon={faGithub}
+							className="text-light text-[2rem] w-fit hover:opacity-50 transition-all duration-300 "
+						/>
+					</a>
+				</div>
+				<div className="top"></div>
+			</div>
 		</div>
 	);
 };

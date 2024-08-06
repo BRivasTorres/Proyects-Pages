@@ -29,10 +29,9 @@ const PrintAuthors = () => {
 		</h3>
 	);
   }  
-  
     
   return (
-    <div className="flex flex-col gap-[1rem] sm:my-[2rem] ">
+    <div className="sm:my-[2rem] flex flex-col gap-y-[10rem] mt-[8rem] md:mt-[6rem] sm:mt-0 ">
         {authorsData.map((item) => {
             const {avatar_url, name, bio, html_url, node_id} = item
             return(

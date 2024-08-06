@@ -4,9 +4,9 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 
 const Credits = () => {
   return (
-		<div className="flex flex-col-reverse items-center gap-x-[3rem] min-h-[100vh] w-[70%] mx-auto max-w-[1600px] sm:grid sm:grid-cols-[_65%_35%] ">
+		<div className="flex flex-col items-center min-h-[100vh] mx-auto max-w-[900px] sm:grid sm:grid-cols-[_65%_35%] ">
 			<PrintAuthors />
-			<section className="text-[2rem] font-semibold flex flex-col my-[4rem] sm:mb-0 gap-y-[3rem] pause-animation">
+			<section className="text-[2rem] font-semibold flex flex-col mb-[8rem] mt-[10rem] gap-y-[3rem] pause-animation  ">
 				<a
 					href="https://50projects50days.com/index.html"
 					target="blank"
