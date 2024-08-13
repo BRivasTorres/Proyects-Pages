@@ -7,3 +7,11 @@
     font-family: "Gupter", serif;
     scroll-behavior: smooth;
 }
+
+.icons {
+    position: absolute;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    top: calc(50% - 125px * cos(calc(var(--i) * calc(360deg / 9))));
+    left: calc(50% + 125px * sin(calc(var(--i) * calc(360deg / 9))));
+}

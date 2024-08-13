@@ -5,7 +5,7 @@ import Header from "./header/Header"
 
 const ReactProjectsPage = () => {
   return (
-    <div className="max-w-[1000px] mx-auto ">
+    <div className="max-w-[1000px] mx-auto px-8 ">
         <Header />
         <Home />
         <About /> 

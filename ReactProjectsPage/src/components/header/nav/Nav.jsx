@@ -3,7 +3,7 @@ const links = [["home", "#home"], ["about", "#about"], ["projects", "#projects"]
 
 const Nav = () => {
   return (
-		<nav className="max-w-[1000px] mx-auto text-[2rem] font-[300] p-4 rounded-[100px] bg-tertiary-color text-secondary-color">
+		<nav className="max-w-[1000px] mx-auto sm:text-[2rem] text-[20px] font-[300] p-4 rounded-[100px] bg-tertiary-color text-secondary-color ">
 			<ul className="flex justify-center">
 				{links.map(([title, url], id) => {
 					return (
