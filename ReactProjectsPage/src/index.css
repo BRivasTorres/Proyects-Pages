@@ -15,3 +15,13 @@
     top: calc(50% - 125px * cos(calc(var(--i) * calc(360deg / 9))));
     left: calc(50% + 125px * sin(calc(var(--i) * calc(360deg / 9))));
 }
+
+.hide {
+    width: 300px;
+    height: 150px;
+    background-color: #282828;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
