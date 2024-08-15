@@ -38,19 +38,23 @@ const AboutRotatable = ({children}) => {
     };
     
     return (
-		<div
-			onMouseDown={handleMouseDown}
-			onMouseUp={handleMouseUp}
-			onMouseMove={handleMouseMove}
-			ref={rotatebleRef}
-			style={{
-				transform: `rotate(${rotate.currentAngle}deg)`,
-			}}
-		>
-			<ul className="w-[300px] h-[300px] bg-primary-color relative p-[1rem] rounded-[100%] cursor-grab">
-			    <AboutPrintIcons currentAngle={rotate.currentAngle} />
-            </ul>
-		</div>
+		<>
+			<ul
+				className="w-[300px] h-[300px] bg-primary-color relative p-[1rem] rounded-[100%] cursor-grab"
+				onMouseDown={handleMouseDown}
+				onMouseUp={handleMouseUp}
+				onMouseMove={handleMouseMove}
+                onTouchEnd={handleMouseUp}
+                onTouchMove={handleMouseMove}
+                onTouchStart={handleMouseDown}
+				ref={rotatebleRef}
+				style={{
+					transform: `rotate(${rotate.currentAngle}deg)`,
+				}}
+			>
+				<AboutPrintIcons currentAngle={rotate.currentAngle} />
+			</ul>
+		</>
 	);
 }
 

@@ -25,3 +25,21 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+
+.text-gradient {
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(30deg, #2CAD5F, #C3F0BE);
+    -webkit-background-clip: text;
+}
+
+.glass-effect {
+    background: rgba(40, 40, 40, 0.62);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(40, 40, 40, 0.3);
+    padding: 2rem;
+}
+
