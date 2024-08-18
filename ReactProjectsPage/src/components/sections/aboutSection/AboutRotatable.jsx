@@ -9,58 +9,40 @@ const AboutRotatable = ({children}) => {
         startAngle: 0,
         currentAngle: 0,
     });
-
-    const handleMouseDown = (e) => {
-        setRotate((prev) => ({
-            ...prev,
-            isDragging: true,
-            startAngle: getAngle(e, rotatebleRef.current.getBoundingClientRect()),
-        }));
-    };
-
-    const handleMouseUp = () => {
-        setRotate((prev) => ({
-            ...prev,
-            isDragging: false,
-        }));
-    };
-
-    const handleMouseMove = (e) => {
-        if (rotate.isDragging) {
-            const angle = getAngle(e, rotatebleRef.current.getBoundingClientRect());
-            const diff = angle - rotate.startAngle;
-            setRotate((prev) => ({
-                ...prev,
-                currentAngle: prev.currentAngle + diff,
-                startAngle: angle,
-            }));
-        }
-    };
-    
-    const handleTouchStart = (e) => {
-		const touch = e.touches[0];
-		setRotate((prev) => ({
-			...prev,
-			isDragging: true,
-			startAngle: getAngle(
-				touch,
-				rotatebleRef.current.getBoundingClientRect()
-			),
-		}));
-	};
-
-	const handleTouchEnd = () => {
+	
+	const setRotateToFalse = () => {
 		setRotate((prev) => ({
 			...prev,
 			isDragging: false,
 		}));
-	};
-
-	const handleTouchMove = (e) => {
-		if (rotate.isDragging) {
-			const touch = e.touches[0];
+	}
+	
+	const setRotateStart = (e) => {
+		const startRotation = (point) => {
+			setRotate((prev) => ({
+				...prev,
+				isDragging: true,
+				startAngle: getAngle(
+					point,
+					rotatebleRef.current.getBoundingClientRect()
+				),
+			}));		
+		}
+		
+		switch (e.type) {
+			case "mousedown":
+				startRotation(e)
+				break;
+			case "touchdown":	
+				startRotation(e.touches[0])	
+				break;
+		}
+	}
+	
+	const setRotateMove = (e) => {
+		const currAngleMoving = (point) => {
 			const angle = getAngle(
-				touch,
+				point,
 				rotatebleRef.current.getBoundingClientRect()
 			);
 			const diff = angle - rotate.startAngle;
@@ -70,7 +52,29 @@ const AboutRotatable = ({children}) => {
 				startAngle: angle,
 			}));
 		}
-	};
+		
+		if(rotate.isDragging) {
+			switch (e.type) {
+				case "mousemove":
+					currAngleMoving(e)
+					break;
+				case "touchmove":
+					currAngleMoving(e.touches[0])
+					break;
+			}
+		}
+	}
+	
+    const handleMouseDown = (e) => setRotateStart(e);
+	const handleTouchStart = (e) => setRotateStart(e);
+
+    const handleMouseMove = (e) => setRotateMove(e);
+	const handleTouchMove = (e) => setRotateMove(e);
+	
+	const handleTouchEnd = () => setRotateToFalse();
+    const handleMouseUp = () => setRotateToFalse();
+	
+
     
     return (
 		<>
