@@ -37,6 +37,41 @@ const AboutRotatable = ({children}) => {
         }
     };
     
+    const handleTouchStart = (e) => {
+		const touch = e.touches[0];
+		setRotate((prev) => ({
+			...prev,
+			isDragging: true,
+			startAngle: getAngle(
+				touch,
+				rotatebleRef.current.getBoundingClientRect()
+			),
+		}));
+	};
+
+	const handleTouchEnd = () => {
+		setRotate((prev) => ({
+			...prev,
+			isDragging: false,
+		}));
+	};
+
+	const handleTouchMove = (e) => {
+		if (rotate.isDragging) {
+			const touch = e.touches[0];
+			const angle = getAngle(
+				touch,
+				rotatebleRef.current.getBoundingClientRect()
+			);
+			const diff = angle - rotate.startAngle;
+			setRotate((prev) => ({
+				...prev,
+				currentAngle: prev.currentAngle + diff,
+				startAngle: angle,
+			}));
+		}
+	};
+    
     return (
 		<>
 			<ul
@@ -44,9 +79,9 @@ const AboutRotatable = ({children}) => {
 				onMouseDown={handleMouseDown}
 				onMouseUp={handleMouseUp}
 				onMouseMove={handleMouseMove}
-                onTouchEnd={handleMouseUp}
-                onTouchMove={handleMouseMove}
-                onTouchStart={handleMouseDown}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
 				ref={rotatebleRef}
 				style={{
 					transform: `rotate(${rotate.currentAngle}deg)`,
